@@ -1,6 +1,6 @@
 {
   "name": "@abstractapi/javascript-core",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "AbstractAPI Javascript Core Library - Used by the other Abstract API libraries",
   "main": "index.js",
   "scripts": {
