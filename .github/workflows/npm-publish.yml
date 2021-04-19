@@ -17,9 +17,10 @@ jobs:
           node-version: 10
 
       - name: Install and test
-        rm package-lock.json
-        npm install --no-optional
-        npm run test
+        run: |
+          rm package-lock.json
+          npm install --no-optional
+          npm run test
 
       - uses: JS-DevTools/npm-publish@v1
         with:
