@@ -7,6 +7,7 @@ Pure JS library for using [Abstract API](https://www.abstractapi.com/). This is 
 To use and maintain this library, please see the following:
 
 - [Javascript Email Validation](https://github.com/abstractapi/javascript-email-validation)
+- [Javascript Exchange Rates](https://github.com/abstractapi/javascript-exchange-rates)
 - [Javascript IP Geolocation](https://github.com/abstractapi/javascript-ip-geolocation)
 - [Javascript Phone Validation](https://github.com/abstractapi/javascript-phone-validation)
 
