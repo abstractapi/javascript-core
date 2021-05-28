@@ -1,7 +1,6 @@
-const makeApiCall = (service, apiKey, params) => {
+const makeApiCall = (service, apiKey, params, path) => {
 
-    const url = buildUrl(service, apiKey, params);
-
+    const url = buildUrl(service, apiKey, params, path);
     let xmlHttp = new XMLHttpRequest();
     return new Promise((resolve, reject) => {
         xmlHttp.onreadystatechange = () => {
@@ -21,7 +20,7 @@ const makeApiCall = (service, apiKey, params) => {
     })
 };
 
-const buildUrl = (service, apiKey, params) => {
+const buildUrl = (service, apiKey, params, path) => {
     if (!apiKey) {
         throw new Error('No api key is set.')
     }
@@ -36,7 +35,13 @@ const buildUrl = (service, apiKey, params) => {
         })
     }
 
-    return`https://${service}.abstractapi.com/v1?api_key=${apiKey}${paramString}&lang=js`;
+    let pathString = '';
+
+    if (typeof path === 'string') {
+        pathString = "/".concat(path);
+    }
+
+    return`https://${service}.abstractapi.com/v1${pathString}?api_key=${apiKey}${paramString}&lang=js`;
 }
 
 export {
